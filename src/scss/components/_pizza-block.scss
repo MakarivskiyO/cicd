@@ -1,0 +1,70 @@
+@import '../variables';
+
+.pizza-block {
+  width: 280px;
+  margin-bottom: 65px;
+  text-align: center;
+
+  &-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__image {
+    width: 260px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+  }
+
+  &__selector {
+    display: flex;
+    flex-direction: column;
+    padding: 6px;
+    border-radius: 10px;
+    background-color: #f3f3f3;
+
+    ul {
+      display: flex;
+      flex: 1;
+
+      &:first-of-type {
+        margin-bottom: 6px;
+      }
+
+      li {
+        flex: 1;
+        padding: 8px;
+        cursor: pointer;
+        font-size: 14px;
+        font-weight: 600;
+        @include noselect();
+
+        &.active {
+          border-radius: 5px;
+          background: #fff;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+          cursor: auto;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+
+  &__price {
+    font-size: 22px;
+    font-weight: bold;
+    letter-spacing: 0.015em;
+    line-height: 27px;
+  }
+}
